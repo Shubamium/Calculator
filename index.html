@@ -13,26 +13,27 @@
         <input type="text" name="number" id="display" class="display" disabled placeholder="Input the calculation here. . .">
       <div class="input">
         <div class="value-btns">
-            <button data-calc-val="1">1</button>
-            <button data-calc-val="2">2</button>
-            <button data-calc-val="3">3</button>
-            <button data-calc-val="4">4</button>
-            <button data-calc-val="5">5</button>
-            <button data-calc-val="6">6</button>
-            <button data-calc-val="7">7</button>
-            <button data-calc-val="8">8</button>
-            <button data-calc-val="9">9</button>
+            <button data-calc-val="1" class="handleInput">1</button>
+            <button data-calc-val="2" class="handleInput">2</button>
+            <button data-calc-val="3" class="handleInput">3</button>
+            <button data-calc-val="4" class="handleInput">4</button>
+            <button data-calc-val="5" class="handleInput">5</button>
+            <button data-calc-val="6" class="handleInput">6</button>
+            <button data-calc-val="7" class="handleInput">7</button>
+            <button data-calc-val="8" class="handleInput">8</button>
+            <button data-calc-val="9" class="handleInput">9</button>
             <div></div>
-            <button data-calc-val="0">0</button>
+            <button data-calc-val="0" class="handleInput">0</button>
+            <button class="handleInput" onclick="backspaceInput()">del</button>
         </div>
         <div class="action-btns grid-auto">
-            <button data-calc-action="add">+</button>
-            <button data-calc-action="sub">-</button>
-            <button data-calc-action="mul">X</button>
-            <button data-calc-action="div">/</button>
+            <button data-calc-val="+" class="handleInput">+</button>
+            <button data-calc-val="-" class="handleInput">-</button>
+            <button data-calc-val="/" class="handleInput">/</button>
+            <button data-calc-val="*" class="handleInput">X</button>
         </div>
-        <button data-calc-action="cle" class="special">Clear</button>
-        <button data-calc-action="eva" class="special">=</button>
+        <button data-calc-action="cle" onclick="clearInput()" class="special">Clear</button>
+        <button data-calc-action="eva" onclick="calculate()" class="special">=</button>
       </div>
     </div>
     <p class="footer"> Shubamium | 2022</p>

@@ -20,6 +20,7 @@ body{
 .title{
     font-size: 2rem ;
     color: white;
+    text-align: center;
 }
 .app{
     background-color: rgb(48, 47, 47);
@@ -58,7 +59,7 @@ body{
         border: none;
         cursor: pointer;
         background-color: rgb(59, 55, 54);
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         border: 1px solid rgba(255, 94, 0, 0.247);
         color: rgb(24, 22, 22);
     }
@@ -87,5 +88,6 @@ body{
         background-color: aliceblue;
         border: 2px solid rgb(61, 58, 58);
         text-align: right;
-        padding: 1em;
+        padding: .2em;
+        color: black;
     }
