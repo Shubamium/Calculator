@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla JS Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="app">
+        <input type="text" name="number" id="display" disabled>
+        <div class="value-btns">
+            <button data-calc-val="0">0</button>
+            <button data-calc-val="1">1</button>
+            <button data-calc-val="2">2</button>
+            <button data-calc-val="3">3</button>
+            <button data-calc-val="4">4</button>
+            <button data-calc-val="5">5</button>
+            <button data-calc-val="6">6</button>
+            <button data-calc-val="7">7</button>
+            <button data-calc-val="8">8</button>
+            <button data-calc-val="9">9</button>
+        </div>
+        <div class="action-btns">
+            <button data-calc-action="add">+</button>
+            <button data-calc-action="sub">-</button>
+            <button data-calc-action="mul">X</button>
+            <button data-calc-action="div">/</button>
+            <button data-calc-action="eva">=</button>
+        </div>
+        <div class="action-btns">
+            <button data-calc-action="cle">Clear</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
 </body>
 </html>
