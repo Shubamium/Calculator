@@ -19,15 +19,10 @@ function backspaceInput(){
 }
 
 function calculate(){
+    if(elDisplay.value === "") return;
     elDisplay.value = eval(elDisplay.value);
 }
 console.log(elInputs);
-// elInputs.array.forEach(input => {
-//     input.addEventListener('click', ()=>{
-//         handleInput(input.dataset.calcVal);
-//         console.log(input.dataset.calcVal);
-//     });
-// });
 
 for(input of elInputs){
     let newVal = input.dataset.calcVal;
