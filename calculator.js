@@ -20,7 +20,8 @@ function backspaceInput(){
 
 function calculate(){
     if(elDisplay.value === "") return;
-    elDisplay.value = eval(elDisplay.value);
+    let convertedVal = elDisplay.value.replace(/x/gi,"*").replace(/÷/,"/");
+    elDisplay.value = eval(convertedVal);
 }
 console.log(elInputs);
 
