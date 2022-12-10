@@ -23,7 +23,6 @@ function calculate(){
     let convertedVal = elDisplay.value.replace(/x/gi,"*").replace(/÷/,"/");
     elDisplay.value = eval(convertedVal);
 }
-console.log(elInputs);
 
 for(input of elInputs){
     let newVal = input.dataset.calcVal;

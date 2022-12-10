@@ -91,3 +91,11 @@ body{
         padding: .2em;
         color: black;
     }
+
+
+.footer{
+    color: grey;
+    font-weight: 200;
+    font-size: .8rem;
+    margin:.5em;
+}
