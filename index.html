@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h2 class="title">Simple Javascript Calculator - vannila.js</h2>
     <div class="app">
-        <input type="text" name="number" id="display" disabled>
+        <input type="text" name="number" id="display" class="display" disabled placeholder="Input the calculation here. . .">
+      <div class="input">
         <div class="value-btns">
-            <button data-calc-val="0">0</button>
             <button data-calc-val="1">1</button>
             <button data-calc-val="2">2</button>
             <button data-calc-val="3">3</button>
@@ -21,18 +22,20 @@
             <button data-calc-val="7">7</button>
             <button data-calc-val="8">8</button>
             <button data-calc-val="9">9</button>
+            <div></div>
+            <button data-calc-val="0">0</button>
         </div>
-        <div class="action-btns">
+        <div class="action-btns grid-auto">
             <button data-calc-action="add">+</button>
             <button data-calc-action="sub">-</button>
             <button data-calc-action="mul">X</button>
             <button data-calc-action="div">/</button>
-            <button data-calc-action="eva">=</button>
         </div>
-        <div class="action-btns">
-            <button data-calc-action="cle">Clear</button>
-        </div>
+        <button data-calc-action="cle" class="special">Clear</button>
+        <button data-calc-action="eva" class="special">=</button>
+      </div>
     </div>
+    <p class="footer"> Shubamium | 2022</p>
     <script src="calculator.js"></script>
 </body>
 </html>
