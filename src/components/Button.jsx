@@ -1,6 +1,6 @@
 const Button = (props) => {
     let text = props.text;
-    let functionality = props.onClick;
+    let functionality = props.action;
     return (  
         <button onClick={functionality}>{text}</button>
     );
@@ -8,7 +8,7 @@ const Button = (props) => {
 
 Button.defaultProps ={
     text:"New Button",
-    onClick: ()=>{console.log("a button is pressed, but no functionality is passed to the prop.")}
+    action: ()=>{console.log("a button is pressed, but no functionality is passed to the prop.")}
 
 }
 export default Button;

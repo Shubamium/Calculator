@@ -1,7 +1,7 @@
-const Display = () => {
+const Display = (props) => {
     return ( 
         <>
-            <input type="text" id="number" disabled />
+            <input type="text" id="number" class="display" disabled placeholder="Input your calculations. . ." value={props.text}/>
         </>
     );
 }
