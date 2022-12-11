@@ -21,9 +21,14 @@ const Calculator = () => {
     }
     
     const evaluateInput = ()=>{
-        const escapeInput = (val)=>val.replace(/x/,"*").replace(/÷/,'/');
+        const escapeInput = (val)=>val.replace(/x/gi,"*").replace(/÷/gi,'/').replace(/\b0(\d+)\b/g, '$1');
         setResult((prev)=>{
-            let res = eval(escapeInput(prev)) || '';
+            let res = '';
+            try{
+                res = eval(escapeInput(prev));
+            }catch{
+                console.log("number contains octal");
+            }
             return res;
         })
     }
@@ -51,7 +56,7 @@ const Calculator = () => {
                     <div className="symbols">
                         <Button text="+" action={()=>{addInput('+')}}/>
                         <Button text="-" action={()=>{addInput('-')}}/>
-                        <Button text="*" action={()=>{addInput('x')}}/>
+                        <Button text="x" action={()=>{addInput('x')}}/>
                         <Button text="÷" action={()=>{addInput('÷')}}/>
                     </div>
                     <Button text="Clear" action={clearInput} className="special"/>
