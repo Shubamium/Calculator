@@ -63,6 +63,7 @@ const Calculator = () => {
                     <Button text="=" action={evaluateInput} className="special"/>
                  </div>
             </div>
+            <p className="footer">Shubamium | 2022</p>
         </div> 
     );
 }
