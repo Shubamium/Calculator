@@ -9,6 +9,12 @@ const Calculator = () => {
             return prev += toInput;
         });
     }
+
+    const removeInput = ()=>{
+        setResult((prev)=>{
+            return prev === "" ? prev : prev.slice(0,-1);
+        });
+    }
     
     return ( 
         <div className="calculator">
@@ -28,7 +34,7 @@ const Calculator = () => {
                         <Button text="9" action={()=>{addInput('9');}}/>
                         <Button text="." action={()=>{addInput('.');}}/>
                         <Button text="0" action={()=>{addInput('0');}}/>
-                        <Button text="del" />
+                        <Button text="del" action={removeInput} />
                     </div>
                     <div className="symbols">
                         <Button text="+" action={()=>{addInput('+')}}/>
