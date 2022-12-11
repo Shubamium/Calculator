@@ -15,7 +15,16 @@ const Calculator = () => {
             return prev === "" ? prev : prev.slice(0,-1);
         });
     }
+
+    const clearInput = ()=>{
+        setResult('');
+    }
     
+    const evaluateInput = ()=>{
+        setResult((prev)=>{
+            return prev === "" ? '' : eval(prev);
+        })
+    }
     return ( 
         <div className="calculator">
             <h2> Simple Javascript Calculator - React.js</h2>
@@ -42,8 +51,8 @@ const Calculator = () => {
                         <Button text="*" action={()=>{addInput('x')}}/>
                         <Button text="/" action={()=>{addInput('/')}}/>
                     </div>
-                    <Button text="="/>
-                    <Button text="Clear"/>
+                    <Button text="=" action={evaluateInput}/>
+                    <Button text="Clear" action={clearInput}/>
                  </div>
             </div>
         </div> 
