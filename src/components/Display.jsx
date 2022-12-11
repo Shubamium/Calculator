@@ -1,7 +1,7 @@
 const Display = (props) => {
     return ( 
         <>
-            <input type="text" id="number" class="display" disabled placeholder="Input your calculations. . ." value={props.text}/>
+            <input type="text" id="number" className="display" disabled placeholder="Input your calculations. . ." value={props.text}/>
         </>
     );
 }

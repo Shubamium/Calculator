@@ -54,8 +54,8 @@ const Calculator = () => {
                         <Button text="*" action={()=>{addInput('x')}}/>
                         <Button text="÷" action={()=>{addInput('÷')}}/>
                     </div>
-                    <Button text="=" action={evaluateInput}/>
-                    <Button text="Clear" action={clearInput}/>
+                    <Button text="Clear" action={clearInput} className="special"/>
+                    <Button text="=" action={evaluateInput} className="special"/>
                  </div>
             </div>
         </div> 
