@@ -21,10 +21,13 @@ const Calculator = () => {
     }
     
     const evaluateInput = ()=>{
+        const escapeInput = (val)=>val.replace(/x/,"*").replace(/÷/,'/');
         setResult((prev)=>{
-            return prev === "" ? '' : eval(prev);
+            let res = eval(escapeInput(prev)) || '';
+            return res;
         })
     }
+    
     return ( 
         <div className="calculator">
             <h2> Simple Javascript Calculator - React.js</h2>
@@ -49,7 +52,7 @@ const Calculator = () => {
                         <Button text="+" action={()=>{addInput('+')}}/>
                         <Button text="-" action={()=>{addInput('-')}}/>
                         <Button text="*" action={()=>{addInput('x')}}/>
-                        <Button text="/" action={()=>{addInput('/')}}/>
+                        <Button text="÷" action={()=>{addInput('÷')}}/>
                     </div>
                     <Button text="=" action={evaluateInput}/>
                     <Button text="Clear" action={clearInput}/>
