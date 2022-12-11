@@ -10,6 +10,7 @@
   height: 400px;
   border: 2px solid rgb(151, 55, 55);
   border-radius: .4em ;
+  margin: 0 auto;
 }
 
 .input{
